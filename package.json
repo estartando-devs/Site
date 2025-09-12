@@ -30,7 +30,7 @@
     "@styled-icons/boxicons-regular": "^10.46.0",
     "@styled-icons/heroicons-outline": "^10.46.0",
     "aos": "^2.3.4",
-    "axios": "^1.6.0",
+    "axios": "^1.12.0",
     "cookies-next": "^2.1.1",
     "framer-motion": "^7.6.1",
     "html2canvas": "^1.4.1",
