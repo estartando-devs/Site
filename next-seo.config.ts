@@ -6,11 +6,11 @@ export default {
   titleTemplate: `%s | Estartando Devs`,
   defaultTitle: title,
   description,
-  canonical: 'https://estartandodevs.com.br/',
+  canonical: 'https://www.estartandodevs.com.br',
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://estartandodevs.com.br',
+    url: 'https://www.estartandodevs.com.br',
     site_name: title,
     title,
     description,

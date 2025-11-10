@@ -24,38 +24,28 @@ export interface ScheduleSectionProps {
 const mock: ISchedule[] = [
   {
     title: 'Inscrições',
-    description: 'Até o dia 02 de junho',
-    dateEnd: '2024-06-02T23:59:00Z',
+    description: '14 a 27 de julho',
+    dateEnd: '2025-07-27T23:59:00Z',
   },
   {
-    title: 'Prova',
-    description: '03 de junho',
-    dateEnd: '2024-06-03T23:59:00Z',
+    title: 'Divulgação do resultado',
+    description: '28 de julho',
+    dateEnd: '2025-07-28T23:59:00Z',
   },
   {
-    title: 'Resultado da Prova',
-    description: '04 de junho',
-    dateEnd: '2024-06-04T23:59:00Z',
-  },
-  // {
-  //   title: 'Hackathon',
-  //   description: '26 de março, às 10h',
-  //   dateEnd: '2022-03-26T12:30:00Z',
-  // },
-  {
-    title: 'Bate papo com o time',
-    description: 'Online, entre os dias 06 de junho e 14 de junho',
-    dateEnd: '2024-06-14T23:59:00Z',
+    title: 'Entrevistas',
+    description: 'Online, entre os dias 29 de julho e 02 de agosto',
+    dateEnd: '2025-08-02T23:59:00Z',
   },
   {
-    title: 'Resultado Final',
-    description: '15 de junho',
-    dateEnd: '2024-06-16T23:59:00Z',
+    title: 'Resultado final',
+    description: '04 de agosto',
+    dateEnd: '2025-08-04T23:59:00Z',
   },
   {
-    title: 'Início das Aulas',
-    description: '18 de junho',
-    dateEnd: '2024-06-19T23:59:00Z',
+    title: 'Aula inaugural',
+    description: '05 de agosto',
+    dateEnd: '2025-08-05T23:59:00Z',
   },
 ];
 
@@ -73,25 +63,18 @@ export const schedule: ISchedule[] = mock.map((current, index) => ({
 const stagesList: Stages[] = [
   {
     stage: {
-      title: 'TESTE DE CLASSIFICAÇÃO',
+      title: 'PREENCHIMENTO DO FORMULÁRIO',
       description:
-        'Uma prova de raciocínio lógico. Simples e objetiva. Funciona como uma classificação de acordo com o número de vagas.',
+        'Queremos conhecer você!\n Você preencherá um formulário com perguntas pessoais discursivas sobre sua experiência, história e formação, seja ela qual for. Selecionaremos os candidatos que se encaixam melhor com a nossa proposta para a próxima etapa.',
     },
     key: 'stage-1',
   },
-  // {
-  //   stage: {
-  //     title: 'НАСКАТНОN',
-  //     description:
-  //       'Como você trabalha em equipe? Além de conhecermos melhor suas habilidades, você já se prepara para as ferramentas que serão usadas ao longo do curso.',
-  //   },
-  //   key: 'stage-2',
-  // },
   {
     stage: {
       title: 'BATE-PAPO COM O TIME',
-      description:
-        'Aqui a gente se conhece melhor e seleciona os candidatos que se encaixam melhor com o nosso perfil.',
+      description: `Aqui a gente se conhece melhor!
+
+         Agendaremos uma conversa online com nosso time para você mostrar seus estudos, projetos e portfólio. Também haverá uma avaliação técnica, onde faremos perguntas sobre os pré-requisitos para iniciar as aulas ao vivo. Não é necessário experiência profissional. Precisamos saber se você tem o conhecimento básico necessário.`,
     },
     key: 'stage-3',
   },

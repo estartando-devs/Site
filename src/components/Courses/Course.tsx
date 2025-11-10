@@ -1,4 +1,3 @@
-import { Eye, EyeOff } from '@styled-icons/heroicons-outline';
 import { useTheme } from 'styled-components';
 import { Typography } from '..';
 import { useAnimation } from '../../hooks/useAnimation';
@@ -34,7 +33,7 @@ export const Course = ({
         <Typography variant="body1">{courseData.title}</Typography>
       </S.TitleContainer>
       <S.IntroText>{courseData.coursePresentation}</S.IntroText>
-      <S.ModulesTextContainer>
+      {/* <S.ModulesTextContainer>
         <S.ModulesText>
           {acordionTitle}
           <EyeOff aria-label="Fechar" width={24} height={24} color={white} />
@@ -45,7 +44,7 @@ export const Course = ({
             <li key={index}> {item}</li>
           ))}
         </S.ListModulesContainer>
-      </S.ModulesTextContainer>
+      </S.ModulesTextContainer> */}
     </S.CourseContainer>
   );
 };

@@ -26,8 +26,10 @@ const OurResultsIcon = ({
       alt={`Icone ${title}`}
       title={`Icone ${title}`}
     />
-    <S.OurResultsIconContainerValue>{`${value}`}</S.OurResultsIconContainerValue>
-    <Typography weight="700" variant="body1">{`${title}`}</Typography>
+    <h3>
+      <S.OurResultsIconContainerValue>{`${value} `}</S.OurResultsIconContainerValue>
+      <Typography weight="700" variant="body1">{`${title}`}</Typography>
+    </h3>
   </S.OurResultsIconContainer>
 );
 

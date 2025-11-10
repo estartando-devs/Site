@@ -33,10 +33,5 @@ export const Analytics = () => (
           `,
       }}
     />
-    {/* SCRIPT OPTIMIZE */}
-    <script
-      async
-      src={`https://www.googleoptimize.com/optimize.js?id=${process.env.NEXT_PUBLIC_OPT_ID_DEVS}`}
-    />
   </>
 );

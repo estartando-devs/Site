@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Typography } from '../Typography';
 
 export const ContainerHeader = styled.header`
   display: flex;
@@ -83,4 +84,50 @@ export const BannerButton = styled.a`
   display: flex;
   background: ${({ theme }) => theme.palette.primary.main};
   border-radius: 4px;
+`;
+
+export const CardButton = styled.button`
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: ${({ theme }) => theme.palette.primary.main};
+  color: ${({ theme }) => theme.palette.design.white};
+  cursor: pointer;
+  margin-top: auto;
+  transition: background 0.2s;
+
+  &:disabled {
+    background: ${({ theme }) => theme.palette.gray[2]};
+    color: ${({ theme }) => theme.palette.gray[4]};
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    background: ${({ theme }) => theme.palette.primary.main};
+    opacity: 0.9;
+  }
+`;
+
+export const CardButtonText = styled(Typography).attrs({
+  variant: 'body1',
+})`
+  ${({ disabled }: { disabled?: boolean }) =>
+    disabled &&
+    css`
+      opacity: 0.5;
+      cursor: not-allowed;
+    `}
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Ubuntu', sans-serif;
+
+  @media (max-width: ${({ theme }) => theme.media.tablet}) {
+    font-size: 18px;
+  }
+  @media (max-width: 500px) {
+    font-size: 15px;
+  }
 `;

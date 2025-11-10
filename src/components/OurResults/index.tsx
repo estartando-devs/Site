@@ -11,10 +11,12 @@ const OurResults = () => (
       data-aos-offset="-300"
       data-aos-anchor-placement="top-center"
     >
-      <Typography variant="h2">Nossos</Typography>
-      <S.OurResultsContainerTitleResults>
-        Resultados
-      </S.OurResultsContainerTitleResults>
+      <Typography variant="h2">
+        Nossos
+        <S.OurResultsContainerTitleResults>
+          Resultados
+        </S.OurResultsContainerTitleResults>
+      </Typography>
     </S.OurResultsContainerTitle>
     <S.OurResultsContainerContent>
       {ourResultsMock?.map(({ image, title, value }, index) => (

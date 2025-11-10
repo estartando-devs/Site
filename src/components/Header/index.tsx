@@ -28,14 +28,28 @@ export const Header = () => (
           <Typography weight="400">
             Transformando o mundo através da tecnologia
           </Typography>
-          {/* <S.ContainerButton>
-          <LinkWrapper
-            href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}
-            legacyBehavior
-          >
-            <S.BannerButton>Inscreva-se!</S.BannerButton>
-          </LinkWrapper>
-        </S.ContainerButton> */}
+          <S.ContainerButton>
+            {/* <a
+              href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                textDecoration: 'none',
+                width: '100%',
+                marginTop: 'auto',
+              }}
+            >
+              <S.CardButton>
+                <S.CardButtonText>Inscreva-se!</S.CardButtonText>
+              </S.CardButton>
+            </a> */}
+            {/* <LinkWrapper
+              href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}
+              legacyBehavior
+            >
+              <S.BannerButton>Inscreva-se!</S.BannerButton>
+            </LinkWrapper> */}
+          </S.ContainerButton>
         </S.ContainerHeading>
       </S.SectionHeader>
     </S.ContainerHeader>

@@ -17,7 +17,7 @@ export const ListApprovedCourses = ({
   <S.ListApprovedContainer id="resultado">
     <S.Title>
       <S.TitleCheckout>Confira a lista de</S.TitleCheckout>
-      <S.TitleApproved> aprovados :D</S.TitleApproved>
+      <S.TitleApproved> aprovados pro curso :D</S.TitleApproved>
     </S.Title>
     {approvedListCourse?.map((objectCourse: ObjectCourseType) => (
       <ApprovedCourses

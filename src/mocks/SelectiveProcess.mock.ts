@@ -5,18 +5,13 @@ export interface ISelectiveProcessItem {
 
 export const selectiveProcessMock: ISelectiveProcessItem[] = [
   {
-    title: 'TESTE DE CLASSIFICAÇÃO',
+    title: 'PREENCHIMENTO DO FORMULÁRIO',
     description:
-      'Uma prova de raciocínio lógico. Simples e objetiva. Funciona como uma classificação de acordo com o número de vagas.',
-  },
-  {
-    title: 'HACKATHON',
-    description:
-      'Como você trabalha em equipe? Além de conhecermos melhor suas habilidades, você já se prepara para as ferramentas que serão usadas ao longo do curso.',
+      'Queremos conhecer você!\n Você preencherá um formulário com perguntas pessoais discursivas sobre sua experiência, história e formação, seja ela qual for. Selecionaremos os candidatos que se encaixam melhor com a nossa proposta para a próxima etapa.',
   },
   {
     title: 'BATE-PAPO COM O TIME',
     description:
-      'Aqui a gente se conhece melhor e seleciona os candidatos que se encaixam melhor com o nosso perfil.',
+      'Aqui a gente se conhece melhor!\n Agendaremos uma conversa online com nosso time para você mostrará seus estudos, projetos e portfólio. Também haverá uma avaliação técnica, onde faremos perguntas sobre os pré-requisitos para iniciar as aulas ao vivo. Não é necessário experiência profissional. Precisamos saber se você tem o conhecimento básico necessário.',
   },
 ];

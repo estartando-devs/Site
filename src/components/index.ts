@@ -1,6 +1,8 @@
+export { default as ApprovedSection } from './ApprovedSection';
 export * from './Card';
 export * from './CommonQuestions';
 export * from './Courses';
+export * from './ErrorState';
 export * from './Footer';
 export * from './Header';
 export * from './HowWeDo';
@@ -8,6 +10,7 @@ export * from './IdCardForm';
 export * from './Layout';
 export * from './LinkWrapper';
 export * from './ListApprovedCourses';
+export * from './LoadingState';
 export * from './Logo';
 export * from './OurResults';
 export * from './OurResultsIcon';

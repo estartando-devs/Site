@@ -12,6 +12,7 @@ import {
   StudentProfile,
   WhatWeTeach,
 } from '../components';
+import { Modalities } from '../components/Modalities';
 import {
   cousesMock,
   howWeDoMock,
@@ -41,11 +42,11 @@ const Home = () => {
       <Header />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
+      <Modalities />
       <HowWeDo {...howWeDoMock} />
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
       <OurResults />
-      {/* <Subscribe /> */}
       <Footer />
     </Layout>
   );
