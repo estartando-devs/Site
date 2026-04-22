@@ -73,8 +73,7 @@ const stagesList: Stages[] = [
     stage: {
       title: 'BATE-PAPO COM O TIME',
       description: `Aqui a gente se conhece melhor!
-
-         Agendaremos uma conversa online com nosso time para você mostrar seus estudos, projetos e portfólio. Também haverá uma avaliação técnica, onde faremos perguntas sobre os pré-requisitos para iniciar as aulas ao vivo. Não é necessário experiência profissional. Precisamos saber se você tem o conhecimento básico necessário.`,
+         Agendaremos uma conversa online com nosso time para conhecer um pouco da sua história. Também faremos um checkpoint sobre os pré-requisitos para iniciar as aulas ao vivo. Não é necessário experiência profissional. O que mais valorizamos é a sua vontade de aprender e se desenvolver!`,
     },
     key: 'stage-3',
   },

@@ -10,15 +10,20 @@ export const frequentlyAskedQuestions = {
       {
         question: 'Como funciona o Estartando Devs?',
         answer:
-          'Hoje temos duas modalidades de curso:\n\nTrilha Gravada\nConteúdo online e gratuito, para você estudar no seu tempo. Qualquer pessoa pode se inscrever e acessar assim que os cursos estiverem disponíveis (em breve!).\n\nTurma ao Vivo\nFormação com aulas online em grupo, ao vivo, com duração de 4 meses, que acontece às terças e quintas, das 19h30 às 21h30.',
+          'Hoje temos duas modalidades de curso:\n\nEstartando\nConteúdo gravado para você estudar no seu tempo. Encontros ao vivo para tirar dúvidas e desenvolver projetos práticos, que acontecem às terças e quintas, das 19h30 às 21h30;\n\nImpulso\nFormação com aulas online em grupo, ao vivo, com duração de 4 meses, que acontecem às terças e quintas, das 19h30 às 21h30.',
       },
       {
         question: 'Quem pode participar?',
         answer:
-          'Para participar de qualquer uma das modalidades, é necessário:\n\n• Estar cursando ou ter concluído o 3º ano do Ensino Médio\n• Desejar ingressar na área de tecnologia ou realizar transição de carreira\n• Estar em situação de vulnerabilidade social e econômica\n• Atender aos pré-requisitos do curso escolhido (no caso das turmas ao vivo)',
+          'Para participar de qualquer uma das modalidades, é necessário:\n\n• Estar cursando ou ter concluído o 3º ano do Ensino Médio;\n• Desejar ingressar na área de tecnologia ou realizar transição de carreira;\n• Atender aos pré-requisitos do curso escolhido (no caso das turmas ao vivo).',
       },
       {
-        question: 'Quais os pré-requisitos para participar das turmas ao vivo?',
+        question: 'Quais os pré-requisitos para participar do módulo Estartando?',
+        answer:
+          'Os únicos pré-requisitos para participar do módulo Estartando são:\n\n• Vontade de aprender;\n• Desejar ingressar na área de tecnologia ou realizar transição de carreira.',
+      },
+      {
+        question: 'Quais os pré-requisitos para participar do módulo Impulso?',
         answer:
           'Os pré-requisitos variam conforme a área. Você pode participar se já tiver conhecimento prévio ou tiver concluído a trilha gravada correspondente (disponível em breve).\n\nDesign UI/UX\n• Entender as etapas do processo de design: Imersão, Definição, Ideação, Prototipação\n• Conhecimento de ferramentas e métodos como: Personas, Jornada do Usuário, Benchmarking, Moodboard\n• Fundamentos de UI: Cores, tipografia, ícones, navegação, botões, hierarquia visual\n• Experiência básica com ferramentas como: Figma, Adobe XD ou similares\n\nDesenvolvimento Backend\n• Lógica de programação: variáveis, condicionais, laços, funções\n• Conhecimento básico em C#\n• Noções de banco de dados relacionais e SQL\n• APIs e REST: endpoints, requisições e respostas\n\nDesenvolvimento Web\n• HTML: estrutura básica, principais tags e atributos\n• CSS: seletores, margin, padding, border, media queries\n• JavaScript: tipos primitivos, var/let/const, condicionais, laços, funções, métodos de array (.map, .filter, .find, forEach)',
       },

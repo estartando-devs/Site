@@ -7,11 +7,12 @@ const modalities = [
     title: 'Estartando',
     bg: '/estartando.png',
     description:
-      'Seu primeiro passo no mundo da tecnologia começa aqui! Nesse módulo, você aprende do zero, com aulas simples e diretas pra ganhar confiança e dar o pontapé inicial na sua jornada.',
+      'Seu primeiro passo no mundo da tecnologia começa aqui! Nesse módulo, você aprende do zero, com aulas gravadas e ao vivo pra ganhar confiança e dar o pontapé inicial na sua jornada.',
     list: [
+      'Aulas gravadas para você rever quando quiser;',
       'Mentoria pra te guiar em cada etapa;',
       'Acesso à comunidade no Discord pra trocar ideias e tirar dúvidas;',
-      'Eventos pra você se conectar e aprender ainda mais;',
+      'Aulas de Soft Skills pra se destacar no mercado.',
     ],
     button: {
       text: 'Quero começar!',
@@ -23,9 +24,11 @@ const modalities = [
     title: 'Impulso',
     bg: '/impulso.png',
     description:
-      'Hora de acelerar! Além de tudo do módulo inicial, aqui você participa de aulas ao vivo por 4 meses, colocando a mão na massa e evoluindo de verdade.',
+      'Hora de acelerar! Além de tudo do módulo inicial, aqui você participa de aulas ao vivo por 4 meses com conteúdo avançado, colocando a mão na massa e evoluindo de verdade.',
     list: [
       'Mentoria contínua pra acompanhar seu crescimento;',
+            'Acesso à comunidade no Discord pra trocar ideias e tirar dúvidas;',
+
       'Aulas de Soft Skills pra se destacar no mercado;',
       'Projetos práticos pra ganhar experiência real.',
     ],

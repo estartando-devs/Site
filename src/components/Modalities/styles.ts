@@ -55,7 +55,6 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 969px;
   position: relative;
   overflow: hidden;
 
@@ -82,7 +81,8 @@ export const Badge = styled.div`
   font-size: 24px;
   border: 1px solid ${({ theme }) => theme.palette.gray[2]};
   font-family: 'Ubuntu', sans-serif;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem calc(1.5rem + 10px);
+  
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
 
@@ -91,7 +91,6 @@ export const Badge = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: center;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1),
     inset 2px 2px 0.5px rgba(255, 255, 255, 0.5),
@@ -103,7 +102,6 @@ export const Badge = styled.div`
 `;
 
 export const CardContent = styled.div`
-  height: 479px;
   border-radius: 0 0 12px 12px;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   display: flex;
@@ -121,8 +119,10 @@ export const CardTitle = styled(Typography).attrs({
 export const CardDescription = styled(Typography)`
   color: ${({ theme }) => theme.palette.design.white};
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.5;
   font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  min-height: 6rem;
 `;
 
 export const CardItem = styled.li`
@@ -135,7 +135,6 @@ export const CardItem = styled.li`
 
 export const CardList = styled.ul`
   margin: 0.5rem 0 1.5rem 0;
-  padding-left: 1.5rem;
   color: ${({ theme }) => theme.palette.design.white};
   font-size: 1rem;
   list-style: none;
@@ -147,6 +146,7 @@ export const CardList = styled.ul`
     content: '▶';
     color: ${({ theme }) => theme.palette.primary.main};
     margin-right: 0.5rem;
+    margin-top: 0.25rem;
     font-size: 0.9rem;
   }
 `;
