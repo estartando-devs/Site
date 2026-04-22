@@ -7,15 +7,14 @@ const modalities = [
     title: 'Estartando',
     bg: '/estartando.png',
     description:
-      'Módulo Iniciante - Neste formato, você terá acesso às aulas gravadas com conteúdos básicos dos três cursos para esquentar seus estudos na área de tecnologia.',
+      'Seu primeiro passo no mundo da tecnologia começa aqui! Nesse módulo, você aprende do zero, com aulas simples e diretas pra ganhar confiança e dar o pontapé inicial na sua jornada.',
     list: [
-      'Mentoria;',
-      'Acesso à comunidade no Discord;',
-      'Eventos;',
-      '1 ano de acesso para os três cursos (Front, Back e Design).',
+      'Mentoria pra te guiar em cada etapa;',
+      'Acesso à comunidade no Discord pra trocar ideias e tirar dúvidas;',
+      'Eventos pra você se conectar e aprender ainda mais;',
     ],
     button: {
-      text: 'Quero me inscrever',
+      text: 'Quero começar!',
       disabled: true,
     },
   },
@@ -24,14 +23,14 @@ const modalities = [
     title: 'Impulso',
     bg: '/impulso.png',
     description:
-      'Módulo Intermediário - Além de tudo que é oferecido no formato Estartando, você participará de 4 meses de aulas ao vivo e ainda:',
+      'Hora de acelerar! Além de tudo do módulo inicial, aqui você participa de aulas ao vivo por 4 meses, colocando a mão na massa e evoluindo de verdade.',
     list: [
-      'Mentoria;',
-      'Aulas de Soft Skills;',
-      'Desenvolvimento de projetos.',
+      'Mentoria contínua pra acompanhar seu crescimento;',
+      'Aulas de Soft Skills pra se destacar no mercado;',
+      'Projetos práticos pra ganhar experiência real.',
     ],
     button: {
-      text: 'Quero me inscrever!',
+      text: 'Quero evoluir!',
       disabled: true,
       href: '/',
     },
