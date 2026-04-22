@@ -81,8 +81,8 @@ export const Badge = styled.div`
   font-size: 24px;
   border: 1px solid ${({ theme }) => theme.palette.gray[2]};
   font-family: 'Ubuntu', sans-serif;
-  padding: 0.5rem calc(1.5rem + 10px);
-  
+  padding: 0.5rem 0 0.5rem calc(1.5rem + 10px);
+
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
 

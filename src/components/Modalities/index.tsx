@@ -3,7 +3,7 @@ import * as S from './styles';
 
 const modalities = [
   {
-    badge: 'Em breve!',
+    badge: 'Inscrições abertas!',
     title: 'Estartando',
     bg: '/estartando.png',
     description:
@@ -16,7 +16,8 @@ const modalities = [
     ],
     button: {
       text: 'Quero começar!',
-      disabled: true,
+      disabled: false,
+      href: process.env.NEXT_PUBLIC_INSCRICOES_URL || '/',
     },
   },
   {
@@ -27,7 +28,7 @@ const modalities = [
       'Hora de acelerar! Além de tudo do módulo inicial, aqui você participa de aulas ao vivo por 4 meses com conteúdo avançado, colocando a mão na massa e evoluindo de verdade.',
     list: [
       'Mentoria contínua pra acompanhar seu crescimento;',
-            'Acesso à comunidade no Discord pra trocar ideias e tirar dúvidas;',
+      'Acesso à comunidade no Discord pra trocar ideias e tirar dúvidas;',
 
       'Aulas de Soft Skills pra se destacar no mercado;',
       'Projetos práticos pra ganhar experiência real.',

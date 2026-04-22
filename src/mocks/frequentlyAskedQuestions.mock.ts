@@ -18,7 +18,8 @@ export const frequentlyAskedQuestions = {
           'Para participar de qualquer uma das modalidades, é necessário:\n\n• Estar cursando ou ter concluído o 3º ano do Ensino Médio;\n• Desejar ingressar na área de tecnologia ou realizar transição de carreira;\n• Atender aos pré-requisitos do curso escolhido (no caso das turmas ao vivo).',
       },
       {
-        question: 'Quais os pré-requisitos para participar do módulo Estartando?',
+        question:
+          'Quais os pré-requisitos para participar do módulo Estartando?',
         answer:
           'Os únicos pré-requisitos para participar do módulo Estartando são:\n\n• Vontade de aprender;\n• Desejar ingressar na área de tecnologia ou realizar transição de carreira.',
       },
