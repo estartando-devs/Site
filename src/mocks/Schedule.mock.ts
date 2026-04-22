@@ -24,28 +24,28 @@ export interface ScheduleSectionProps {
 const mock: ISchedule[] = [
   {
     title: 'Inscrições',
-    description: '14 a 27 de julho',
-    dateEnd: '2025-07-27T23:59:00Z',
+    description: '22 de abril a 2 de maio',
+    dateEnd: '2026-05-01T23:59:00Z',
   },
   {
-    title: 'Divulgação do resultado',
-    description: '28 de julho',
-    dateEnd: '2025-07-28T23:59:00Z',
+    title: 'Divulgação dos selecionados para entrevista',
+    description: '03 de maio',
+    dateEnd: '2026-05-03T23:59:00Z',
   },
   {
     title: 'Entrevistas',
-    description: 'Online, entre os dias 29 de julho e 02 de agosto',
-    dateEnd: '2025-08-02T23:59:00Z',
+    description: 'Entre os dias 04 e 09 de maio',
+    dateEnd: '2026-05-09T23:59:00Z',
   },
   {
     title: 'Resultado final',
-    description: '04 de agosto',
-    dateEnd: '2025-08-04T23:59:00Z',
+    description: '10 de maio',
+    dateEnd: '2026-05-10T23:59:00Z',
   },
   {
     title: 'Aula inaugural',
-    description: '05 de agosto',
-    dateEnd: '2025-08-05T23:59:00Z',
+    description: '12 de maio',
+    dateEnd: '2026-05-12T23:59:00Z',
   },
 ];
 
