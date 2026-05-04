@@ -76,18 +76,20 @@ export const useApprovedSubscriptions = ({
       setError(null);
 
       const response: ApprovedSubscriptionsResponse =
-        await getApprovedSubscriptions({
-          year,
-        });
+        await getApprovedSubscriptions({ year });
 
-      const courseKey = course.toLowerCase();
-      const students = response.integrantes[courseKey] || [];
+      const courseNames = response.integrantes[courseKey] ?? [];
 
-      // Transformar os dados da API para o formato esperado pelo componente
+      if (courseNames.length === 0) {
+        setError('Nenhum aprovado encontrado para o curso selecionado');
+        setApprovedData([]);
+        return;
+      }
+
       const transformedData: ObjectCourseType = {
-        course: course,
+        course,
         color: getCourseColor(course),
-        students: sortNamesAlphabetically(students),
+        students: sortNamesAlphabetically(courseNames),
       };
 
       setApprovedData([transformedData]);
