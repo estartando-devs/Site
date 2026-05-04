@@ -45,10 +45,10 @@ export const useMultipleApprovedSubscriptions = (
       setLoading(true);
       setError(null);
 
-       const response: ApprovedSubscriptionsResponse =
-            await getApprovedSubscriptions({
-              year
-            });
+      const response: ApprovedSubscriptionsResponse =
+        await getApprovedSubscriptions({
+          year,
+        });
 
       const results = COURSES_CONFIG.map((courseConfig) => {
         try {

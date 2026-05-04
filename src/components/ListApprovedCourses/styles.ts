@@ -88,6 +88,6 @@ export const TitleApproved = styled(Typography).attrs({
 export const ListApprovedContainer = styled.section`
   padding: 4rem 7.5rem 4rem;
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-      padding: 4rem 1rem;
+    padding: 4rem 1rem;
   }
 `;

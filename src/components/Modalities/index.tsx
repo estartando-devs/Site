@@ -15,8 +15,8 @@ const modalities = [
       'Aulas de Soft Skills pra se destacar no mercado.',
     ],
     button: {
-      text: 'Quero começar!',
-      disabled: false,
+      text: 'Encerrado',
+      disabled: true,
       href: process.env.NEXT_PUBLIC_INSCRICOES_URL || '/',
     },
   },

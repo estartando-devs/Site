@@ -13,6 +13,7 @@ import {
   StudentProfile,
   WhatWeTeach,
 } from '../components';
+import { BannerApproved } from '../components/Approved';
 import { Modalities } from '../components/Modalities';
 import {
   cousesMock,
@@ -21,7 +22,6 @@ import {
   studentProfileSection,
   whatWeTeachMock,
 } from '../mocks';
-import { BannerApproved } from '../components/Approved';
 
 const Home = () => {
   useEffect(() => {
