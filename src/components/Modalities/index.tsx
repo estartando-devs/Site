@@ -17,8 +17,8 @@ const modalities = [
       'Aulas de Soft Skills',
     ],
     button: {
-      text: 'Quero começar!',
-      disabled: false,
+      text: 'Encerrado',
+      disabled: true,
       href: process.env.NEXT_PUBLIC_INSCRICOES_URL || '/',
     },
   },
