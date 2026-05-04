@@ -8,28 +8,22 @@ export type ApprovedSubscription = {
 };
 
 export type ApprovedSubscriptionsResponse = {
-  course: string;
-  year: string;
-  totalApproved: number;
-  subscriptions: ApprovedSubscription[];
+  ano: string;
+  status: string;
+  integrantes: { [course: string]: string[] };
 };
 
 type ApprovedSubscriptionsParams = {
-  course: string;
   year?: string;
 };
 
 export const getApprovedSubscriptions = async ({
-  course,
   year = '2025',
 }: ApprovedSubscriptionsParams): Promise<ApprovedSubscriptionsResponse> => {
-  const params = new URLSearchParams({
-    course,
-    year,
-  });
+  // `https://9h6j9n1vpc.execute-api.us-east-1.amazonaws.com/subscriptions/approved-course?${params}`
 
   const response = await fetch(
-    `https://9h6j9n1vpc.execute-api.us-east-1.amazonaws.com/subscriptions/approved-course?${params}`,
+    `https://9h6j9n1vpc.execute-api.us-east-1.amazonaws.com/inscricoes/integrantes?ano=${year}&status=aprovado_triagem`,
     {
       method: 'GET',
       headers: {

@@ -2,6 +2,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import {
+  ApprovedSection,
   Courses,
   Footer,
   Header,
@@ -20,6 +21,7 @@ import {
   studentProfileSection,
   whatWeTeachMock,
 } from '../mocks';
+import { BannerApproved } from '../components/Approved';
 
 const Home = () => {
   useEffect(() => {
@@ -39,7 +41,9 @@ const Home = () => {
 
   return (
     <Layout>
+      <BannerApproved />
       <Header />
+      <ApprovedSection />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
       <Modalities />

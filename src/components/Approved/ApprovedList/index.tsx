@@ -3,7 +3,7 @@ import { coursesData } from './mock';
 
 export const ApprovedList = () => (
   <S.ApprovedListContainer id="Resultado">
-    <S.ApprovedTitle>Lista de aprovados pro curso</S.ApprovedTitle>
+    <S.ApprovedTitle>Lista de selecionados para as entrevistas</S.ApprovedTitle>
     <S.Lists>
       {Object.keys(coursesData).map((key: string) => (
         <S.CourseData

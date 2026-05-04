@@ -29,7 +29,7 @@ export const Header = () => (
             Transformando o mundo através da tecnologia
           </Typography>
           <S.ContainerButton>
-            <a
+            {/* <a
               href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}
               target="_blank"
               rel="noopener noreferrer"
@@ -42,7 +42,7 @@ export const Header = () => (
               <S.CardButton>
                 <S.CardButtonText>Inscreva-se!</S.CardButtonText>
               </S.CardButton>
-            </a>
+            </a> */}
             {/* <LinkWrapper
               href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}
               legacyBehavior

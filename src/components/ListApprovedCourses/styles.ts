@@ -71,7 +71,6 @@ export const Title = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 0.265rem;
 `;
 
@@ -87,5 +86,8 @@ export const TitleApproved = styled(Typography).attrs({
 `;
 
 export const ListApprovedContainer = styled.section`
-  padding: 6.25rem 0;
+  padding: 4rem 7.5rem 4rem;
+  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+      padding: 4rem 1rem;
+  }
 `;

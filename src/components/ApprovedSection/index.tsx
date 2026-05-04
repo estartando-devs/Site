@@ -5,7 +5,7 @@ import { LoadingState } from '../LoadingState';
 
 const ApprovedSection = () => {
   const { approvedData, loading, error, refetch } =
-    useMultipleApprovedSubscriptions('2025');
+    useMultipleApprovedSubscriptions('2026');
 
   const handleRetry = () => {
     refetch();

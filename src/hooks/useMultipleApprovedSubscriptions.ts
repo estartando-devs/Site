@@ -14,16 +14,16 @@ type CourseConfig = {
 
 const COURSES_CONFIG: CourseConfig[] = [
   {
-    name: 'Desenvolvimento Web',
+    name: 'web',
     displayName: 'Desenvolvimento Web',
     color: 'green_dark',
   },
   {
-    name: 'Desenvolvimento Backend',
+    name: 'backend',
     displayName: 'Desenvolvimento Backend',
     color: 'blue_dark',
   },
-  { name: 'Design UI/UX', displayName: 'Design UI/UX', color: 'purple' },
+  { name: 'designUiUx', displayName: 'Design UI/UX', color: 'purple' },
 ];
 
 type UseMultipleApprovedSubscriptionsReturn = {
@@ -45,22 +45,21 @@ export const useMultipleApprovedSubscriptions = (
       setLoading(true);
       setError(null);
 
-      const promises = COURSES_CONFIG.map(async (courseConfig) => {
-        try {
-          const response: ApprovedSubscriptionsResponse =
+       const response: ApprovedSubscriptionsResponse =
             await getApprovedSubscriptions({
-              course: courseConfig.name,
-              year,
+              year
             });
 
+      const results = COURSES_CONFIG.map((courseConfig) => {
+        try {
+          const courseNames = response.integrantes[courseConfig.name];
+
           // Só retorna se houver aprovados
-          if (response.subscriptions.length > 0) {
+          if (courseNames && courseNames.length > 0) {
             return {
               course: courseConfig.displayName,
               color: courseConfig.color,
-              students: sortNamesAlphabetically(
-                response.subscriptions.map((sub) => sub.fullName),
-              ),
+              students: sortNamesAlphabetically(courseNames),
             } as ObjectCourseType;
           }
           return null;
@@ -70,7 +69,6 @@ export const useMultipleApprovedSubscriptions = (
         }
       });
 
-      const results = await Promise.all(promises);
       const validResults = results.filter(
         (result) => result !== null,
       ) as ObjectCourseType[];
