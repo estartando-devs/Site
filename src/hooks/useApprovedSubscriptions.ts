@@ -45,29 +45,51 @@ export const useApprovedSubscriptions = ({
     return courseColors[normalizedCourse] || 'green_dark';
   };
 
+  const getCourseKey = (courseName: string) => {
+    const normalizedCourse = courseName.toLowerCase().trim();
+
+    const courseKeys: Record<string, string> = {
+      web: 'web',
+      javascript: 'web',
+      frontend: 'web',
+      backend: 'backend',
+      design: 'designUiUx',
+      'ui/ux': 'designUiUx',
+      'design ui/ux': 'designUiUx',
+      'desenvolvimento web': 'web',
+      'desenvolvimento backend': 'backend',
+    };
+
+    return courseKeys[normalizedCourse] || normalizedCourse;
+  };
+
   const fetchApprovedData = async () => {
     if (!course) {
       setError('Curso não especificado');
       return;
     }
 
+    const courseKey = getCourseKey(course);
+
     try {
       setLoading(true);
       setError(null);
 
       const response: ApprovedSubscriptionsResponse =
-        await getApprovedSubscriptions({
-          course,
-          year,
-        });
+        await getApprovedSubscriptions({ year });
 
-      // Transformar os dados da API para o formato esperado pelo componente
+      const courseNames = response.integrantes[courseKey] ?? [];
+
+      if (courseNames.length === 0) {
+        setError('Nenhum aprovado encontrado para o curso selecionado');
+        setApprovedData([]);
+        return;
+      }
+
       const transformedData: ObjectCourseType = {
-        course: response.course,
-        color: getCourseColor(response.course),
-        students: sortNamesAlphabetically(
-          response.subscriptions.map((sub) => sub.fullName),
-        ),
+        course,
+        color: getCourseColor(course),
+        students: sortNamesAlphabetically(courseNames),
       };
 
       setApprovedData([transformedData]);
