@@ -93,6 +93,14 @@ export const Footer = () => {
                     FAQ
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/politicas-de-privacidade"
+                    className="text-white/60 hover:text-white text-sm font-bold transition-colors"
+                  >
+                    Privacidade
+                  </Link>
+                </li>
               </ul>
             </div>
 
