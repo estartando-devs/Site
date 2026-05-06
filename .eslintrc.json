@@ -32,8 +32,7 @@
     "react-hooks",
     "jsx-a11y",
     "import",
-    "unused-imports",
-    "eslint-plugin-no-inline-styles"
+    "unused-imports"
   ],
   "rules": {
     "prettier/prettier": [

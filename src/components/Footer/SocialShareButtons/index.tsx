@@ -1,19 +1,21 @@
 import Link from 'next/link';
 import { useSocialButtons } from '../../../hooks/useSocialButtons';
-import * as S from './styles';
 
 export const SocialShareButtons = () => {
   const { socialLinks } = useSocialButtons();
 
   return (
-    <S.SocialShareContainer>
+    <div className="flex gap-4 items-center justify-center">
       {socialLinks.map(({ title, href, iconProps, icon: Icon }) => (
         <Link key={title} href={href} target="_blank" rel="noreferrer noopener">
-          <S.SocialShareContent title={title}>
+          <div
+            title={title}
+            className="p-2 flex items-center justify-center rounded-lg bg-surface-variant/20 shadow-lg border border-white/5 hover:bg-surface-variant/40 transition-all"
+          >
             <Icon {...iconProps} />
-          </S.SocialShareContent>
+          </div>
         </Link>
       ))}
-    </S.SocialShareContainer>
+    </div>
   );
 };

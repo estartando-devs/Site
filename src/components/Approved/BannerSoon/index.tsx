@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { useSocialButtons } from '../../../hooks/useSocialButtons';
-
 import { Typography } from '../../Typography';
-import * as S from './BannerSoonStyled';
 
 export const BannerSoon = () => {
   const { socialLinks } = useSocialButtons();
@@ -12,21 +10,14 @@ export const BannerSoon = () => {
   );
 
   return (
-    <S.BannerSoonContainer>
-      <S.BannerContent>
-        <Typography variant="h2" weight="bold">
+    <div className="w-full bg-brand-purple py-[70px] px-2.5 md:px-[100px] flex flex-col justify-center items-center">
+      <div className="w-full max-w-[1028px] flex flex-col items-center gap-4">
+        <Typography variant="h2" weight="bold" className="text-center">
           Teremos mais informações em breve! Fique ligado nas nossas redes
           sociais!
         </Typography>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: '10px',
-          }}
-        >
+        <div className="flex flex-row items-center gap-2.5">
           {socialLinksWithInstagram.map(
             ({ title, href, iconProps, icon: Icon }) => (
               <Link
@@ -40,8 +31,8 @@ export const BannerSoon = () => {
             ),
           )}
         </div>
-      </S.BannerContent>
-    </S.BannerSoonContainer>
+      </div>
+    </div>
   );
 };
 

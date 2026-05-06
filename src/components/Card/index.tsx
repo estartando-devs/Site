@@ -1,8 +1,16 @@
 import { HTMLAttributes, PropsWithChildren } from 'react';
-import * as S from './styles';
 
 export type CardProps = HTMLAttributes<HTMLDivElement>;
 
-export const Card = ({ children, ...props }: PropsWithChildren<CardProps>) => (
-  <S.Wrapper {...props}>{children}</S.Wrapper>
+export const Card = ({
+  children,
+  className = '',
+  ...props
+}: PropsWithChildren<CardProps>) => (
+  <div
+    className={`flex bg-surface-container/60 shadow-lg rounded-[4px] border border-white/5 ${className}`}
+    {...props}
+  >
+    {children}
+  </div>
 );

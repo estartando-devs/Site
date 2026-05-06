@@ -1,12 +1,21 @@
 import { HTMLAttributes, PropsWithChildren } from 'react';
-import * as S from './styles';
+
+type LayoutProps = {
+  full?: boolean;
+} & HTMLAttributes<HTMLDivElement>;
 
 export const Layout = ({
   children,
   full = false,
+  className = '',
   ...props
-}: { full?: boolean } & PropsWithChildren<HTMLAttributes<HTMLDivElement>>) => (
-  <S.Container full={full} {...props}>
+}: PropsWithChildren<LayoutProps>) => (
+  <main
+    className={`bg-surface-dark w-full ${
+      full ? 'h-screen' : 'min-h-full'
+    } ${className}`}
+    {...props}
+  >
     {children}
-  </S.Container>
+  </main>
 );

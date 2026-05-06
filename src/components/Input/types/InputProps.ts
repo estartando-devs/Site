@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { FieldElement, RegisterOptions } from 'react-hook-form';
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement> &
@@ -5,4 +6,5 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> &
     id: string;
     validation?: RegisterOptions;
     isError?: boolean;
+    icon?: ReactNode;
   };

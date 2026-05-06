@@ -1,4 +1,3 @@
-import { Box } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import { Footer, Layout, Logo, Typography } from '../components';
@@ -7,27 +6,21 @@ export default function NotfoundPage() {
   return (
     <Layout full>
       <NextSeo title="404" description="Oops! Página não encontrada.." />
-      <Box height="100%" display="flex" flexDirection="column" gap="2rem">
-        <Box padding="2.5rem">
+      <div className="h-full flex flex-col gap-8">
+        <div className="p-10">
           <header>
             <Link href="/">
               <Logo width={48} height={68} priority quality={30} />
             </Link>
           </header>
-        </Box>
-        <Box
-          height="100%"
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          paddingLeft="2.5rem"
-          paddingRight="2.5rem"
-        >
-          <Typography variant="h1">Oops! Página não encontrada.</Typography>
-        </Box>
+        </div>
+        <div className="flex-1 flex flex-col justify-center items-center px-10">
+          <Typography variant="h1" className="text-white">
+            Oops! Página não encontrada.
+          </Typography>
+        </div>
         <Footer />
-      </Box>
+      </div>
     </Layout>
   );
 }
