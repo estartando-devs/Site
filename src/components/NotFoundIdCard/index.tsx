@@ -1,25 +1,22 @@
-import { Button } from '@chakra-ui/react';
-import { Error } from '@styled-icons/boxicons-regular';
+import { AlertCircle } from 'lucide-react';
 import Router from 'next/router';
-import { useTheme } from 'styled-components';
 import { Typography } from '../Typography';
-import * as S from './styles';
 
 export const NotFoundIdCard = () => {
-  const theme = useTheme();
-
   const { push } = Router;
 
   return (
-    <S.Container>
-      <Error color={theme.palette.design.orange} width={200} height={200} />
-      <Typography variant="h1">Oops! Página não encontrada.</Typography>
-      <Button
-        backgroundColor={theme.palette.design.green}
+    <main className="mt-20 w-screen h-full flex flex-col items-center justify-center text-center gap-6">
+      <AlertCircle className="text-orange-500 w-[200px] h-[200px]" />
+      <Typography variant="h1" className="text-white">
+        Oops! Página não encontrada.
+      </Typography>
+      <button
         onClick={() => push('/id-card')}
+        className="bg-brand-teal text-surface-dark px-10 py-3 rounded-lg font-bold hover:bg-brand-teal/90 transition-all"
       >
         Voltar
-      </Button>
-    </S.Container>
+      </button>
+    </main>
   );
 };

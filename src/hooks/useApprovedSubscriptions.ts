@@ -57,17 +57,17 @@ export const useApprovedSubscriptions = ({
 
       const response: ApprovedSubscriptionsResponse =
         await getApprovedSubscriptions({
-          course,
           year,
         });
 
+      const courseKey = course.toLowerCase();
+      const students = response.integrantes[courseKey] || [];
+
       // Transformar os dados da API para o formato esperado pelo componente
       const transformedData: ObjectCourseType = {
-        course: response.course,
-        color: getCourseColor(response.course),
-        students: sortNamesAlphabetically(
-          response.subscriptions.map((sub) => sub.fullName),
-        ),
+        course: course,
+        color: getCourseColor(course),
+        students: sortNamesAlphabetically(students),
       };
 
       setApprovedData([transformedData]);

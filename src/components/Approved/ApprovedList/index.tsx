@@ -1,18 +1,29 @@
-import * as S from './ApprovedListStyled';
+import { Course } from '../../Courses/Course';
+import { Typography } from '../../Typography';
 import { coursesData } from './mock';
 
 export const ApprovedList = () => (
-  <S.ApprovedListContainer id="Resultado">
-    <S.ApprovedTitle>Lista de selecionados para as entrevistas</S.ApprovedTitle>
-    <S.Lists>
+  <section
+    id="Resultado"
+    className="w-full max-w-desktop_fullhd mx-auto px-8 md:px-0 py-8 flex flex-col gap-8"
+  >
+    <Typography
+      variant="h2"
+      className="text-center underline underline-offset-8 mb-8"
+    >
+      Lista de selecionados para as entrevistas
+    </Typography>
+
+    <div className="flex flex-col w-full">
       {Object.keys(coursesData).map((key: string) => (
-        <S.CourseData
+        <Course
           key={key}
           acordionTitle="Ver Lista"
           withAnimation={false}
           courseData={coursesData[key]}
+          className="uppercase"
         />
       ))}
-    </S.Lists>
-  </S.ApprovedListContainer>
+    </div>
+  </section>
 );

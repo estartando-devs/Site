@@ -1,95 +1,74 @@
-import { Box, useToast } from '@chakra-ui/react';
-import { getCookie } from 'cookies-next';
-import { GetServerSideProps } from 'next';
 import { NextSeo } from 'next-seo';
-import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { Layout } from '../../components';
 import {
   IdCard as IdCardComponent,
   IdCardProps,
 } from '../../components/IdCard';
 import { NotFoundIdCard } from '../../components/NotFoundIdCard';
-import { cleanZipcode, getAddressByCep, http } from '../../services';
 
-export const getServerSideProps: GetServerSideProps = async ({
-  query,
-  req,
-  res,
-}) => {
-  const subscribers = await new Promise<string[]>((resolve) => {
-    http<string[]>(`${process.env.NEXT_PUBLIC_GET_EMAILS}`).then((data) =>
-      resolve(data.parsedBody as string[]),
-    );
-  });
-
-  const userEmail = query.email as string;
-
-  const subscribe = subscribers.find(
-    (subscribeEmail) =>
-      subscribeEmail?.toLowerCase() === userEmail.toLowerCase(),
-  );
-
-  if (!subscribe) {
-    return {
-      props: {
-        error: 'Subscriber not found',
-      },
-    };
-  }
-
-  const nagatoCookie = getCookie('nagato', { req, res }) || '{}';
-  const { zipcode, course, name } = JSON.parse(nagatoCookie as string);
-  const { localidade = null, uf = null } = await getAddressByCep(
-    cleanZipcode(zipcode),
-  );
-
-  const profile = {
-    name: name,
-    image: {
-      src: 'https://res.cloudinary.com/elite-devs/images/logo',
-      alt: `imagem aluno(a) ${name}`,
-    },
-    course: course,
-    address: {
-      city: localidade,
-      state: uf,
-    },
-  };
-  return {
-    props: {
-      profile,
-    },
-  };
-};
-
-export default function MyIdCard({
-  profile,
-  error,
-}: {
-  profile: IdCardProps;
-  error?: string;
-}) {
-  const toast = useToast();
+export default function MyIdCard() {
+  const router = useRouter();
+  const { isReady, query } = router;
+  const [profile, setProfile] = useState<IdCardProps | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!error) {
-      toast({
-        position: 'top',
-        title: 'Tudo pronto!',
-        description:
-          'Agora você pode compartilhar seu id card. Não esqueça de nos marcar.',
-        status: 'success',
-        duration: 5000,
-        isClosable: true,
-      });
-    }
-    // eslint-disable-next-line
-  }, []);
+    if (!isReady) return;
 
-  if (error) {
+    const { name, course, city, state, team } = query;
+
+    if (!name || !course) {
+      setError('Missing required information');
+      setLoading(false);
+      return;
+    }
+
+    // Get image from sessionStorage (client-side only)
+    const storageImage = sessionStorage.getItem('id-card-image');
+    let imageSrc = 'https://res.cloudinary.com/elite-devs/images/logo';
+
+    if (storageImage) {
+      try {
+        const value = JSON.parse(storageImage);
+        if (value?.image?.src) imageSrc = value.image.src;
+      } catch (e) {
+        console.error('Error parsing storage image', e);
+      }
+    }
+
+    setProfile({
+      name: name as string,
+      image: {
+        src: imageSrc,
+        alt: `imagem aluno(a) ${name}`,
+      },
+      course: course as string,
+      team: team === 'true',
+      address: {
+        city: (city as string) || 'Rio de Janeiro',
+        state: (state as string) || 'RJ',
+      },
+    });
+    setLoading(false);
+  }, [isReady, query]);
+
+  if (loading) {
     return (
       <Layout>
-        <NotFoundIdCard />;
+        <div className="flex justify-center items-center min-h-[60vh]">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-brand-teal"></div>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (error || !profile) {
+    return (
+      <Layout>
+        <NotFoundIdCard />
       </Layout>
     );
   }
@@ -105,16 +84,9 @@ export default function MyIdCard({
         nofollow
         noindex
       />
-      <Box
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        height="100%"
-        padding="2rem"
-      >
+      <div className="flex flex-col justify-center items-center h-full p-8">
         <IdCardComponent {...profile} />
-      </Box>
+      </div>
     </Layout>
   );
 }

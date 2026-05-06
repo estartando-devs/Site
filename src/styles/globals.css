@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Ubuntu:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-brand-teal: #00BFA6;
+  --color-brand-purple: #6C63FF;
+  --color-surface-dark: #121413;
+  --color-surface-container: #1e201f;
+  --color-surface-variant: #343534;
+
+  --color-primary-light: var(--color-brand-teal);
+  --color-primary-main: var(--color-brand-teal);
+  --color-primary-dark: #008f7a;
+  
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Ubuntu", sans-serif;
+
+  --color-background-paper: var(--color-surface-container);
+  --color-background-default: var(--color-surface-dark);
+
+  --breakpoint-mobile_portrait: 320px;
+  --breakpoint-mobile_default: 360px;
+  --breakpoint-mobile_landscape: 480px;
+  --breakpoint-tablet_portrait: 600px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-tablet_landscape: 801px;
+  --breakpoint-laptops_landscape: 1024px;
+  --breakpoint-desktop_hd: 1280px;
+  --breakpoint-desktop_fullhd: 1600px;
+
+  @keyframes shimmer {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+}
+
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-surface-dark text-white font-sans antialiased;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface-container/60 backdrop-blur-xl border border-white/5;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-teal/10;
+  }
+
+  .bg-primary-light { background-color: var(--color-primary-light); }
+  .bg-primary-main { background-color: var(--color-primary-main); }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  border-radius: 999px;
+  background: #c7c8ca;
+  transition: all 0.3s ease-in-out;
+}
+*:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aeb0b2;
+  border-radius: 5px;
+}

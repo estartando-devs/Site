@@ -1,7 +1,7 @@
 import { useMultipleApprovedSubscriptions } from '../../hooks/useMultipleApprovedSubscriptions';
 import { ErrorState } from '../ErrorState';
 import { ListApprovedCourses } from '../ListApprovedCourses';
-import { LoadingState } from '../LoadingState';
+import { ListApprovedSkeleton } from '../ListApprovedCourses/Skeleton';
 
 const ApprovedSection = () => {
   const { approvedData, loading, error, refetch } =
@@ -12,9 +12,7 @@ const ApprovedSection = () => {
   };
 
   if (loading) {
-    return (
-      <LoadingState message="Carregando lista de aprovados pro curso..." />
-    );
+    return <ListApprovedSkeleton />;
   }
 
   if (error) {

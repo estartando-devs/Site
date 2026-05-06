@@ -1,4 +1,3 @@
-import { Box } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 import { Footer, IdCardForm, Layout } from '../../../components';
 
@@ -14,15 +13,10 @@ export default function IdCardTeam() {
         noindex
         nofollow
       />
-      <Box
-        minHeight="100vh"
-        height="100%"
-        display="flex"
-        flexDirection="column"
-      >
+      <div className="min-h-screen flex flex-col">
         <IdCardForm team />
         <Footer />
-      </Box>
+      </div>
     </Layout>
   );
 }
