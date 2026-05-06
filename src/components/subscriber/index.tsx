@@ -48,7 +48,7 @@ const COURSE_TO_API: Record<string, 'web' | 'backend' | 'uiux'> = {
 };
 
 const year = new Date().getFullYear();
-const IS_REGISTRATION_CLOSED = true;
+const IS_REGISTRATION_CLOSED = false;
 
 const steps = [
   <Compass key="trilha" />, // 0
@@ -365,11 +365,14 @@ export const Subscriber = () => {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <div className="space-y-2">
             <h2 className="font-display text-[36px] text-white font-bold tracking-tight uppercase">
-              Inscrições {year}
+              Inscrições {year} —{' '}
+              <span className="text-brand-purple">Impulso Abertas</span>
             </h2>
             <p className="text-white/60 max-w-2xl leading-relaxed">
               Faça parte da próxima turma do Estartando Devs e inicie sua
-              jornada na tecnologia.
+              jornada na tecnologia. Neste ciclo, as inscrições estão abertas
+              exclusivamente para a trilha{' '}
+              <span className="text-white font-semibold">Impulso</span>.
             </p>
           </div>
         </div>
@@ -400,6 +403,7 @@ export const Subscriber = () => {
                     tracks={tracks}
                     selectedTrack={selectedTrack}
                     setSelectedTrack={handleTrackSelection}
+                    disabledTracks={['estartando']}
                   />
                 </motion.div>
               )}

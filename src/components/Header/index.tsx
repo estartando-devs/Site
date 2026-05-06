@@ -40,11 +40,11 @@ export const Header = () => (
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 backdrop-blur-md mb-2"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-purple/10 border border-brand-purple/20 backdrop-blur-md mb-2"
         >
-          <Sparkles className="w-4 h-4 text-brand-teal" />
-          <span className="text-xs font-bold text-brand-teal uppercase tracking-widest">
-            Inscrições 2026 — Estartando Encerrado
+          <Sparkles className="w-4 h-4 text-brand-purple" />
+          <span className="text-xs font-bold text-brand-purple uppercase tracking-widest">
+            Inscrições 2026 — Impulso Abertas
           </span>
         </motion.div>
 

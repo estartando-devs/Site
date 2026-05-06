@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Ubuntu:wght@400;500;700;900&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui";
 
 @theme {
-  --color-brand-teal: #00BFA6;
-  --color-brand-purple: #6C63FF;
+  --color-brand-teal: #00bfa6;
+  --color-brand-purple: #6c63ff;
   --color-surface-dark: #121413;
   --color-surface-container: #1e201f;
   --color-surface-variant: #343534;
@@ -12,9 +12,9 @@
   --color-primary-light: var(--color-brand-teal);
   --color-primary-main: var(--color-brand-teal);
   --color-primary-dark: #008f7a;
-  
-  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Ubuntu", sans-serif;
+
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Ubuntu', sans-serif;
 
   --color-background-paper: var(--color-surface-container);
   --color-background-default: var(--color-surface-dark);
@@ -30,8 +30,12 @@
   --breakpoint-desktop_fullhd: 1600px;
 
   @keyframes shimmer {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(100%); }
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
   }
 }
 
@@ -59,13 +63,17 @@
   .glass-panel {
     @apply bg-surface-container/60 backdrop-blur-xl border border-white/5;
   }
-  
+
   .hover-lift {
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-teal/10;
   }
 
-  .bg-primary-light { background-color: var(--color-primary-light); }
-  .bg-primary-main { background-color: var(--color-primary-main); }
+  .bg-primary-light {
+    background-color: var(--color-primary-light);
+  }
+  .bg-primary-main {
+    background-color: var(--color-primary-main);
+  }
 }
 
 ::-webkit-scrollbar {

@@ -66,7 +66,7 @@ export const SelectiveProcess = ({
             </h3>
             <div className="h-px flex-1 bg-white/5 hidden md:block mx-10" />
             <div className="flex items-center gap-2 text-brand-teal text-xs font-bold">
-              <Clock className="w-4 h-4" /> CICLO 2026.1
+              <Clock className="w-4 h-4" /> CICLO 2026 — IMPULSO
             </div>
           </div>
 

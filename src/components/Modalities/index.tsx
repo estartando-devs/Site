@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 
 const modalities = [
   {
-    badge: 'Inscrições abertas!',
+    badge: 'Inscrições encerradas',
     title: 'Estartando',
     bg: '/estartando.png',
     accent: 'brand-teal',
@@ -19,11 +19,11 @@ const modalities = [
     button: {
       text: 'Encerrado',
       disabled: true,
-      href: process.env.NEXT_PUBLIC_INSCRICOES_URL || '/',
+      href: '/',
     },
   },
   {
-    badge: 'Vagas limitadas!',
+    badge: 'Inscrições abertas!',
     title: 'Impulso',
     bg: '/impulso.png',
     accent: 'brand-purple',
@@ -38,8 +38,8 @@ const modalities = [
     ],
     button: {
       text: 'Quero evoluir!',
-      disabled: true,
-      href: '/',
+      disabled: false,
+      href: process.env.NEXT_PUBLIC_INSCRICOES_URL || '/inscricoes',
     },
   },
 ];
