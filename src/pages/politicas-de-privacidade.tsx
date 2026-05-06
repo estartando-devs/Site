@@ -27,8 +27,8 @@ export default function PoliticasDePrivacidade() {
                 Política de <span className="text-brand-teal">Privacidade</span>
               </Typography>
               <Typography variant="body2" className="text-white/40 font-medium">
-                Esta Política de Privacidade foi atualizada pela última vez em 05
-                de Março de 2021.
+                Esta Política de Privacidade foi atualizada pela última vez em
+                05 de Março de 2021.
               </Typography>
             </header>
 
@@ -74,7 +74,10 @@ export default function PoliticasDePrivacidade() {
                     integridade. Os dados são retidos pelo tempo necessário para
                     atender aos fins para que foram coletados.
                   </Typography>
-                  <Typography variant="body2" className="leading-relaxed font-bold text-white/90">
+                  <Typography
+                    variant="body2"
+                    className="leading-relaxed font-bold text-white/90"
+                  >
                     Os dados colhidos quando o usuário utiliza os Serviços são
                     usados para:
                   </Typography>
@@ -90,7 +93,7 @@ export default function PoliticasDePrivacidade() {
                       <li>Respondendo às perguntas e dúvidas do usuário;</li>
                       <li>
                         Enviar informações ao usuário, por e-mail ou mensagens
-                         de texto, sobre o progresso dele no processo, e
+                        de texto, sobre o progresso dele no processo, e
                         eventuais eventos;
                       </li>
                     </ul>
@@ -109,13 +112,18 @@ export default function PoliticasDePrivacidade() {
                 </Typography>
                 <div className="space-y-4">
                   <Typography variant="body2" className="leading-relaxed">
-                    <strong className="text-white/90">Com os instrutores:</strong> Compartilhamos dados
-                    sobre o usuário com do conteúdo educacional que o usuário
-                    acessa ou sobre os quais solicita informações, para que eles
-                    possam melhorar o conteúdo para o usuário e outros alunos.
+                    <strong className="text-white/90">
+                      Com os instrutores:
+                    </strong>{' '}
+                    Compartilhamos dados sobre o usuário com do conteúdo
+                    educacional que o usuário acessa ou sobre os quais solicita
+                    informações, para que eles possam melhorar o conteúdo para o
+                    usuário e outros alunos.
                   </Typography>
                   <Typography variant="body2" className="leading-relaxed">
-                    <strong className="text-white/90">Para segurança e conformidade com a lei:</strong>{' '}
+                    <strong className="text-white/90">
+                      Para segurança e conformidade com a lei:
+                    </strong>{' '}
                     Poderemos divulgar os dados do usuário a terceiros se (a
                     nosso exclusivo critério) acreditarmos, pautados na boa-fé,
                     que a divulgação seja:
@@ -147,8 +155,10 @@ export default function PoliticasDePrivacidade() {
                     </li>
                   </ul>
                   <Typography variant="body2" className="leading-relaxed">
-                    <strong className="text-white/90">Com a permissão do usuário:</strong> Com
-                    consentimento do usuário, podemos compartilhar dados com
+                    <strong className="text-white/90">
+                      Com a permissão do usuário:
+                    </strong>{' '}
+                    Com consentimento do usuário, podemos compartilhar dados com
                     terceiros fora do escopo desta Política de Privacidade.
                   </Typography>
                 </div>
