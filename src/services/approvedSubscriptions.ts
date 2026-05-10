@@ -23,7 +23,7 @@ export const getApprovedSubscriptions = async ({
   // `https://9h6j9n1vpc.execute-api.us-east-1.amazonaws.com/subscriptions/approved-course?${params}`
 
   const response = await fetch(
-    `https://9h6j9n1vpc.execute-api.us-east-1.amazonaws.com/inscricoes/integrantes?ano=${year}&status=aprovado_triagem`,
+    `https://9h6j9n1vpc.execute-api.us-east-1.amazonaws.com/inscricoes/integrantes?ano=${year}&status=aprovado`,
     {
       method: 'GET',
       headers: {

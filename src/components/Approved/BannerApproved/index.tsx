@@ -16,7 +16,7 @@ export const BannerApproved = () => (
         variant="body3"
         className="font-black uppercase tracking-[0.1em] text-center md:text-left text-xs md:text-sm"
       >
-        A lista de selecionados para as entrevistas já está disponível!
+        A lista final de aprovados já está disponível!
       </Typography>
       <a
         href="#resultado"
