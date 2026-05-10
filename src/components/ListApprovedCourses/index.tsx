@@ -43,13 +43,13 @@ export const ListApprovedCourses = ({
           >
             Parabéns aos{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-purple">
-              Selecionados
+              Aprovados
             </span>
             !
           </Typography>
           <p className="text-xl text-white/50 max-w-[700px] mx-auto font-medium">
-            Confira abaixo a lista oficial dos candidatos aprovados para a etapa
-            de entrevistas do Ciclo 2026.
+            Confira abaixo a lista oficial dos candidatos aprovados do Ciclo
+            2026.
           </p>
         </div>
       </div>

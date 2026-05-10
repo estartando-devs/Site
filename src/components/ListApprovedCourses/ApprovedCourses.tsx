@@ -71,7 +71,6 @@ export const ApprovedCourses = ({
               <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-white/20" />
               <div className="flex items-center gap-1.5 text-white/40 text-[10px] font-bold uppercase tracking-widest">
                 <Users className="w-3 h-3" /> {approvedCourse.students.length}{' '}
-                Selecionados
               </div>
             </div>
             <Typography
@@ -96,7 +95,7 @@ export const ApprovedCourses = ({
             </>
           ) : (
             <>
-              Ver Selecionados <Eye className="w-4 h-4" />
+              Ver Aprovados <Eye className="w-4 h-4" />
             </>
           )}
         </button>

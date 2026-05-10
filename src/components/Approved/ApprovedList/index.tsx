@@ -11,7 +11,7 @@ export const ApprovedList = () => (
       variant="h2"
       className="text-center underline underline-offset-8 mb-8"
     >
-      Lista de selecionados para as entrevistas
+      Lista de Aprovados
     </Typography>
 
     <div className="flex flex-col w-full">
