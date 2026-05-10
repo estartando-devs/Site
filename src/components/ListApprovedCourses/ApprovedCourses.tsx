@@ -74,7 +74,7 @@ export const ApprovedCourses = ({
               </div>
             </div>
             <Typography
-              variant="h2"
+              variant="h3"
               className="text-3xl md:text-4xl text-white font-black tracking-tight"
             >
               {approvedCourse.course}
