@@ -41,6 +41,8 @@ export const StudentProfile = ({ title }: studentSectionProfile) => (
       <img
         src="/perfil-aluno-bg.webp"
         alt=""
+        loading="lazy"
+        decoding="async"
         className="w-full h-full object-cover object-right"
       />
     </div>
