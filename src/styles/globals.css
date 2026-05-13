@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Ubuntu:wght@400;500;700;900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -13,8 +12,8 @@
   --color-primary-main: var(--color-brand-teal);
   --color-primary-dark: #008f7a;
   
-  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Ubuntu", sans-serif;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-ubuntu), sans-serif;
 
   --color-background-paper: var(--color-surface-container);
   --color-background-default: var(--color-surface-dark);

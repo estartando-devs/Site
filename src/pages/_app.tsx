@@ -1,13 +1,28 @@
 import { DefaultSeo } from 'next-seo';
 import { AppProps } from 'next/app';
+import { Open_Sans, Ubuntu } from 'next/font/google';
 import Head from 'next/head';
 import NextNProgress from 'nextjs-progressbar';
 import SEO from '../../next-seo.config';
 import '../styles/globals.css';
 
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-open-sans',
+});
+
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+  variable: '--font-ubuntu',
+});
+
 function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className={`${openSans.variable} ${ubuntu.variable}`}>
       <Head>
         <meta
           name="google-site-verification"
@@ -27,7 +42,7 @@ function App({ Component, pageProps }: AppProps) {
         height={3}
       />
       <Component {...pageProps} />
-    </>
+    </div>
   );
 }
 
