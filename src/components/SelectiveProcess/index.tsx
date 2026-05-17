@@ -21,7 +21,7 @@ export const SelectiveProcess = ({
           >
             <Typography
               variant="h2"
-              className="text-[40px] md:text-[56px] font-black text-white leading-[1.1] uppercase italic [&>span]:text-brand-teal"
+              className="text-[40px] md:text-[56px] font-black text-white leading-[1.1] uppercase italic tracking-tighter pr-8 [&>span]:text-brand-teal"
               dangerouslySetInnerHTML={{ __html: title }}
             />
             <div className="w-24 h-2 bg-brand-teal rounded-full" />
@@ -35,23 +35,23 @@ export const SelectiveProcess = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2 }}
-                className="group p-8 rounded-3xl bg-surface-container/40 border border-white/5 hover:border-brand-teal/30 transition-all shadow-xl relative overflow-hidden"
+                className="group p-5 md:p-8 rounded-3xl bg-surface-container/40 border border-white/5 hover:border-brand-teal/30 transition-all shadow-xl relative overflow-hidden"
               >
                 <div className="absolute -right-4 -top-4 w-24 h-24 bg-brand-teal/5 rounded-full blur-2xl group-hover:bg-brand-teal/10 transition-all" />
-                <div className="flex items-start gap-6 relative z-10">
-                  <div className="w-12 h-12 rounded-2xl bg-brand-teal/10 border border-brand-teal/20 flex items-center justify-center shrink-0">
-                    <span className="font-display font-black text-brand-teal text-xl">
-                      {idx + 1}
-                    </span>
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-xl font-display font-black text-white uppercase tracking-tight group-hover:text-brand-teal transition-colors">
+                <div className="relative z-10 space-y-4">
+                  <div className="flex items-center gap-3 md:gap-6">
+                    <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-2xl bg-brand-teal/10 border border-brand-teal/20 flex items-center justify-center shrink-0">
+                      <span className="font-display font-black text-brand-teal text-base md:text-xl">
+                        {idx + 1}
+                      </span>
+                    </div>
+                    <h3 className="text-base md:text-xl font-display font-black text-white uppercase tracking-tight group-hover:text-brand-teal transition-colors">
                       {stage.title}
                     </h3>
-                    <p className="text-white/50 leading-relaxed font-medium">
-                      {stage.description}
-                    </p>
                   </div>
+                  <p className="text-xs md:text-base text-white/50 leading-relaxed font-medium w-full px-1">
+                    {stage.description}
+                  </p>
                 </div>
               </motion.div>
             ))}

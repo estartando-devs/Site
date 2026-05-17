@@ -49,6 +49,10 @@
   html {
     @apply scroll-smooth;
   }
+
+  button {
+    @apply cursor-pointer;
+  }
 }
 
 @layer components {

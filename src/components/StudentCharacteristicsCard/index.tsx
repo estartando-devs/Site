@@ -17,10 +17,8 @@ export const StudentCharacteristicsCard = ({
 
   return (
     <motion.div
-      whileHover={{ scale: 1.05, x: index % 2 === 0 ? 5 : -5 }}
-      className={`relative w-full max-w-[320px] p-6 rounded-2xl bg-surface-container/30 border border-white/5 backdrop-blur-sm flex items-center gap-5 group transition-all hover:border-brand-teal/30 hover:bg-surface-container/50 shadow-xl ${
-        index % 2 === 0 ? 'self-start' : 'self-end'
-      }`}
+      whileHover={{ scale: 1.02, x: index % 2 === 0 ? 5 : -5 }}
+      className={`relative w-full p-6 rounded-2xl bg-surface-container/30 border border-white/5 backdrop-blur-sm flex items-center gap-5 group transition-all hover:border-brand-teal/30 hover:bg-surface-container/50 shadow-xl`}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-brand-teal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
 
