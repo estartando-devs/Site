@@ -73,9 +73,7 @@ export const ApprovedCourses = ({
                 <Users className="w-3 h-3" /> {approvedCourse.students.length}{' '}
               </div>
             </div>
-            <Typography
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-black tracking-tight"
-            >
+            <Typography className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-black tracking-tight">
               {approvedCourse.course}
             </Typography>
           </div>

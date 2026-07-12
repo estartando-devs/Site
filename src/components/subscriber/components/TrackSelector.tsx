@@ -41,8 +41,8 @@ export const TrackSelector = ({
                   isDisabled
                     ? 'bg-surface-variant/10 border-white/5 text-white/20 cursor-not-allowed opacity-50'
                     : isSelected
-                      ? 'bg-brand-teal/10 border-brand-teal/50 text-white shadow-[0_0_20px_rgba(0,191,166,0.1)]'
-                      : 'bg-surface-variant/30 border-white/5 text-white/60 hover:bg-white/5 hover:border-white/10 hover:text-white'
+                    ? 'bg-brand-teal/10 border-brand-teal/50 text-white shadow-[0_0_20px_rgba(0,191,166,0.1)]'
+                    : 'bg-surface-variant/30 border-white/5 text-white/60 hover:bg-white/5 hover:border-white/10 hover:text-white'
                 }
               `}
               onClick={() => !isDisabled && setSelectedTrack(track.value)}
@@ -52,8 +52,8 @@ export const TrackSelector = ({
                   isDisabled
                     ? 'bg-white/5 text-white/20'
                     : isSelected
-                      ? 'bg-brand-teal text-surface-dark'
-                      : 'bg-white/5 text-white/40 group-hover:text-white'
+                    ? 'bg-brand-teal text-surface-dark'
+                    : 'bg-white/5 text-white/40 group-hover:text-white'
                 }`}
               >
                 <Icon size={24} />
@@ -69,15 +69,15 @@ export const TrackSelector = ({
                   isDisabled
                     ? 'text-white/20'
                     : isSelected
-                      ? 'text-brand-teal'
-                      : 'text-white/20 group-hover:text-white/40'
+                    ? 'text-brand-teal'
+                    : 'text-white/20 group-hover:text-white/40'
                 }`}
               >
                 {isDisabled
                   ? 'Inscrições Encerradas'
                   : isSelected
-                    ? 'Trilha Selecionada'
-                    : 'Selecionar Trilha'}
+                  ? 'Trilha Selecionada'
+                  : 'Selecionar Trilha'}
               </div>
             </button>
           );

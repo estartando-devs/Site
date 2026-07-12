@@ -1,5 +1,4 @@
 import {
-  ApprovedSection,
   Courses,
   Footer,
   Header,
@@ -10,7 +9,6 @@ import {
   StudentProfile,
   WhatWeTeach,
 } from '../components';
-import { BannerApproved } from '../components/Approved';
 import { Modalities } from '../components/Modalities';
 import {
   cousesMock,
