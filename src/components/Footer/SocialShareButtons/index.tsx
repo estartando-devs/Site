@@ -5,7 +5,7 @@ export const SocialShareButtons = () => {
   const { socialLinks } = useSocialButtons();
 
   return (
-    <div className="flex gap-4 items-center justify-center">
+    <div className="flex gap-4 items-center">
       {socialLinks.map(({ title, href, iconProps, icon: Icon }) => (
         <Link key={title} href={href} target="_blank" rel="noreferrer noopener">
           <div

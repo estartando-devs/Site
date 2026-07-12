@@ -23,9 +23,10 @@ import {
 const Home = () => {
   return (
     <Layout>
-      <BannerApproved />
+      {/* BannerApproved e ApprovedSection removidos — processo seletivo anterior encerrado */}
+      {/* <BannerApproved /> */}
       <Header />
-      <ApprovedSection />
+      {/* <ApprovedSection /> */}
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
       <Modalities />

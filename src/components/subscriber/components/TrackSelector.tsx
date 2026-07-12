@@ -11,12 +11,14 @@ type Props = {
   tracks: Track[];
   selectedTrack: string | null;
   setSelectedTrack: (v: string | null) => void;
+  disabledTracks?: string[];
 };
 
 export const TrackSelector = ({
   tracks,
   selectedTrack,
   setSelectedTrack,
+  disabledTracks = [],
 }: Props) => {
   return (
     <div className="flex flex-col items-center gap-6">
@@ -26,26 +28,32 @@ export const TrackSelector = ({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
         {tracks.map((track) => {
           const isSelected = selectedTrack === track.value;
+          const isDisabled = disabledTracks.includes(track.value);
           const Icon = track.icon;
 
           return (
             <button
               key={track.value}
               type="button"
+              disabled={isDisabled}
               className={`flex flex-col items-start gap-4 p-6 rounded-3xl border transition-all duration-300 text-left group
                 ${
-                  isSelected
-                    ? 'bg-brand-teal/10 border-brand-teal/50 text-white shadow-[0_0_20px_rgba(0,191,166,0.1)]'
-                    : 'bg-surface-variant/30 border-white/5 text-white/60 hover:bg-white/5 hover:border-white/10 hover:text-white'
+                  isDisabled
+                    ? 'bg-surface-variant/10 border-white/5 text-white/20 cursor-not-allowed opacity-50'
+                    : isSelected
+                      ? 'bg-brand-teal/10 border-brand-teal/50 text-white shadow-[0_0_20px_rgba(0,191,166,0.1)]'
+                      : 'bg-surface-variant/30 border-white/5 text-white/60 hover:bg-white/5 hover:border-white/10 hover:text-white'
                 }
               `}
-              onClick={() => setSelectedTrack(track.value)}
+              onClick={() => !isDisabled && setSelectedTrack(track.value)}
             >
               <div
                 className={`p-3 rounded-2xl transition-colors ${
-                  isSelected
-                    ? 'bg-brand-teal text-surface-dark'
-                    : 'bg-white/5 text-white/40 group-hover:text-white'
+                  isDisabled
+                    ? 'bg-white/5 text-white/20'
+                    : isSelected
+                      ? 'bg-brand-teal text-surface-dark'
+                      : 'bg-white/5 text-white/40 group-hover:text-white'
                 }`}
               >
                 <Icon size={24} />
@@ -58,12 +66,18 @@ export const TrackSelector = ({
               </div>
               <div
                 className={`mt-2 flex items-center gap-2 text-xs font-black uppercase tracking-widest ${
-                  isSelected
-                    ? 'text-brand-teal'
-                    : 'text-white/20 group-hover:text-white/40'
+                  isDisabled
+                    ? 'text-white/20'
+                    : isSelected
+                      ? 'text-brand-teal'
+                      : 'text-white/20 group-hover:text-white/40'
                 }`}
               >
-                {isSelected ? 'Trilha Selecionada' : 'Selecionar Trilha'}
+                {isDisabled
+                  ? 'Inscrições Encerradas'
+                  : isSelected
+                    ? 'Trilha Selecionada'
+                    : 'Selecionar Trilha'}
               </div>
             </button>
           );

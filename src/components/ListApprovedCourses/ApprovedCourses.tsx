@@ -54,28 +54,27 @@ export const ApprovedCourses = ({
       className={`w-full group rounded-3xl border ${style.border} ${style.bg} backdrop-blur-xl transition-all duration-500 overflow-hidden mb-8 shadow-2xl hover:shadow-${approvedCourse.color}/10`}
     >
       {/* Header Info */}
-      <div className="p-8 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
-        <div className="flex items-start gap-6">
+      <div className="p-6 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
+        <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
           <div
-            className={`w-16 h-16 rounded-2xl ${style.badge}/20 border ${style.border} flex items-center justify-center shrink-0`}
+            className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl ${style.badge}/20 border ${style.border} flex items-center justify-center shrink-0`}
           >
-            <Trophy className={`w-8 h-8 ${style.text}`} />
+            <Trophy className={`w-6 h-6 md:w-8 md:h-8 ${style.text}`} />
           </div>
           <div className="space-y-2">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2 md:gap-3">
               <span
-                className={`text-[10px] font-black uppercase tracking-[0.3em] ${style.text}`}
+                className={`text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] ${style.text}`}
               >
                 Aprovados 2026
               </span>
-              <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
+              <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-white/20" />
               <div className="flex items-center gap-1.5 text-white/40 text-[10px] font-bold uppercase tracking-widest">
                 <Users className="w-3 h-3" /> {approvedCourse.students.length}{' '}
               </div>
             </div>
             <Typography
-              variant="h3"
-              className="text-3xl md:text-4xl text-white font-black tracking-tight"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-black tracking-tight"
             >
               {approvedCourse.course}
             </Typography>
@@ -84,7 +83,7 @@ export const ApprovedCourses = ({
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center gap-3 px-8 py-3.5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all ${
+          className={`flex items-center justify-center gap-3 px-6 md:px-8 py-3 md:py-3.5 rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest transition-all cursor-pointer ${
             isOpen
               ? 'bg-white/10 text-white border border-white/10'
               : `${style.badge} text-surface-dark shadow-lg`
