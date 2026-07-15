@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ArrowRight, Check, Star } from 'lucide-react';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 
 const modalities = [
@@ -39,7 +40,7 @@ const modalities = [
     button: {
       text: 'Quero evoluir!',
       disabled: false,
-      href: process.env.NEXT_PUBLIC_INSCRICOES_URL || '/inscricoes',
+      href: '/inscricao',
     },
   },
 ];
@@ -145,26 +146,43 @@ export const Modalities = () => {
                 </div>
 
                 <div className="mt-auto pt-4">
-                  <a
-                    href={modality.button.href}
-                    target={modality.button.disabled ? undefined : '_blank'}
-                    rel="noopener noreferrer"
-                    className={`group/btn relative flex items-center justify-center gap-3 w-full py-5 rounded-2xl font-display font-black text-xl text-center transition-all ${
+                  {(() => {
+                    const btnClass = `group/btn relative flex items-center justify-center gap-3 w-full py-5 rounded-2xl font-display font-black text-xl text-center transition-all ${
                       modality.button.disabled
                         ? 'bg-surface-variant/50 text-white/20 cursor-not-allowed border border-white/5'
                         : modality.accent === 'brand-teal'
                         ? 'bg-brand-teal text-surface-dark shadow-[0_8px_30px_rgba(0,191,166,0.3)] hover:shadow-[0_8px_40px_rgba(0,191,166,0.5)]'
                         : 'bg-brand-purple text-white shadow-[0_8px_30px_rgba(108,99,255,0.3)] hover:shadow-[0_8px_40px_rgba(108,99,255,0.5)]'
-                    }`}
-                    onClick={(e) =>
-                      modality.button.disabled && e.preventDefault()
+                    }`;
+                    const inner = (
+                      <>
+                        {modality.button.text}
+                        {!modality.button.disabled && (
+                          <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform" />
+                        )}
+                      </>
+                    );
+                    if (modality.button.disabled) {
+                      return (
+                        <span className={btnClass}>{inner}</span>
+                      );
                     }
-                  >
-                    {modality.button.text}
-                    {!modality.button.disabled && (
-                      <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform" />
-                    )}
-                  </a>
+                    const isExternal = modality.button.href.startsWith('http');
+                    return isExternal ? (
+                      <a
+                        href={modality.button.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={btnClass}
+                      >
+                        {inner}
+                      </a>
+                    ) : (
+                      <Link href={modality.button.href} className={btnClass}>
+                        {inner}
+                      </Link>
+                    );
+                  })()}
                 </div>
               </div>
             </motion.div>
