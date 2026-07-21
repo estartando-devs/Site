@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ArrowRight, Check, Star } from 'lucide-react';
-import Link from 'next/link';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 
 const modalities = [
   {
@@ -163,9 +163,7 @@ export const Modalities = () => {
                       </>
                     );
                     if (modality.button.disabled) {
-                      return (
-                        <span className={btnClass}>{inner}</span>
-                      );
+                      return <span className={btnClass}>{inner}</span>;
                     }
                     const isExternal = modality.button.href.startsWith('http');
                     return isExternal ? (
