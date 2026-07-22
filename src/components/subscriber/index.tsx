@@ -24,6 +24,7 @@ import { ErrorModal } from './ErrorModal';
 
 import { AddressForm } from './components/AddressForm';
 import { ConfirmationStep } from './components/ConfirmationStep';
+import { CourseRequirementsModal } from './components/CourseRequirementsModal';
 import { CourseSelector } from './components/CourseSelector';
 import { ExperienceForm } from './components/ExperienceForm';
 import { PersonalDataForm } from './components/PersonalDataForm';
@@ -92,6 +93,8 @@ export const Subscriber = () => {
   const [loading, setLoading] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showRequirementsModal, setShowRequirementsModal] = useState(false);
+  const [showCourseRequirementsModal, setShowCourseRequirementsModal] =
+    useState(false);
   const [showError, setShowError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [errorTitle, setErrorTitle] = useState('');
@@ -169,6 +172,11 @@ export const Subscriber = () => {
   const handleTrackSelection = (track: string | null) => {
     setSelectedTrack(track);
     if (track) setShowRequirementsModal(true);
+  };
+
+  const handleCourseSelection = (course: string | null) => {
+    setSelectedCourse(course);
+    if (course) setShowCourseRequirementsModal(true);
   };
 
   async function handleSubmit() {
@@ -351,6 +359,11 @@ export const Subscriber = () => {
           onClose={() => setShowRequirementsModal(false)}
           track={selectedTrack}
         />
+        <CourseRequirementsModal
+          open={showCourseRequirementsModal}
+          onClose={() => setShowCourseRequirementsModal(false)}
+          course={selectedCourse}
+        />
         <ConfirmationModal
           open={showConfirmation}
           onClose={() => setShowConfirmation(false)}
@@ -418,7 +431,7 @@ export const Subscriber = () => {
                   <CourseSelector
                     courses={courses}
                     selectedCourse={selectedCourse}
-                    setSelectedCourse={setSelectedCourse}
+                    setSelectedCourse={handleCourseSelection}
                   />
                 </motion.div>
               )}
