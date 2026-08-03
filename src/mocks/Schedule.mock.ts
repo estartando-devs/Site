@@ -24,7 +24,7 @@ export interface ScheduleSectionProps {
 const mock: ISchedule[] = [
   {
     title: 'Inscrições',
-    description: 'Abertas agora',
+    description: 'Encerradas',
     dateEnd: '2026-08-31T23:59:00Z',
   },
   {

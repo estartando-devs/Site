@@ -24,7 +24,7 @@ const modalities = [
     },
   },
   {
-    badge: 'Inscrições abertas!',
+    badge: 'Inscrições encerradas',
     title: 'Impulso',
     bg: '/impulso.png',
     accent: 'brand-purple',
@@ -38,8 +38,8 @@ const modalities = [
       'Direcionamento de carreira',
     ],
     button: {
-      text: 'Quero evoluir!',
-      disabled: false,
+      text: 'Encerrado',
+      disabled: true,
       href: '/inscricao',
     },
   },

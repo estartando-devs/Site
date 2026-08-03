@@ -49,7 +49,7 @@ const COURSE_TO_API: Record<string, 'web' | 'backend' | 'uiux'> = {
 };
 
 const year = new Date().getFullYear();
-const IS_REGISTRATION_CLOSED = false;
+const IS_REGISTRATION_CLOSED = true;
 
 const steps = [
   <Compass key="trilha" />, // 0
@@ -279,9 +279,7 @@ export const Subscriber = () => {
                 Inscrições Encerradas
               </h1>
               <p className="text-white/60 text-lg font-medium">
-                O período de inscrições para a trilha{' '}
-                <span className="text-white font-bold">Estartando</span> no
-                ciclo {year} chegou ao fim.
+                O período de inscrições para o ciclo {year} chegou ao fim.
               </p>
             </div>
           </div>
@@ -302,9 +300,8 @@ export const Subscriber = () => {
 
                 <div className="bg-brand-teal/10 border border-brand-teal/20 rounded-2xl p-5 mt-6">
                   <p className="text-brand-teal text-sm font-bold leading-relaxed">
-                    🚀 Prepare-se! No próximo semestre abriremos uma nova janela
-                    de inscrições exclusiva para a trilha{' '}
-                    <span className="underline uppercase">Impulso</span>.
+                    🚀 Prepare-se! Fique de olho nas nossas redes sociais para
+                    acompanhar novidades sobre os próximos ciclos de inscrições.
                   </p>
                 </div>
               </div>

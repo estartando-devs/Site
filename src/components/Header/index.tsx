@@ -40,11 +40,11 @@ export const Header = () => (
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-purple/10 border border-brand-purple/20 backdrop-blur-md mb-2"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-2"
         >
-          <Sparkles className="w-4 h-4 text-brand-purple" />
-          <span className="text-xs font-bold text-brand-purple uppercase tracking-widest">
-            Inscrições 2026 — Impulso Abertas
+          <Sparkles className="w-4 h-4 text-white/70" />
+          <span className="text-xs font-bold text-white/70 uppercase tracking-widest">
+            Inscrições 2026 — Encerradas
           </span>
         </motion.div>
 
@@ -83,10 +83,9 @@ export const Header = () => (
         >
           <Link
             href="/inscricao"
-            className="group relative flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-5 rounded-2xl bg-brand-teal text-surface-dark font-display font-black text-xl hover:bg-brand-teal/90 transition-all shadow-[0_8px_30px_rgba(0,191,166,0.4)] active:scale-95 overflow-hidden text-center"
+            className="group relative flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-5 rounded-2xl bg-surface-variant/80 border border-white/10 text-white/70 font-display font-black text-xl hover:bg-surface-variant transition-all shadow-lg active:scale-95 overflow-hidden text-center"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:animate-shimmer" />
-            Quero me inscrever!
+            Inscrições Encerradas
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
           </Link>
 
