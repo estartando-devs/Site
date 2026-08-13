@@ -49,7 +49,7 @@ const COURSE_TO_API: Record<string, 'web' | 'backend' | 'uiux'> = {
 };
 
 const year = new Date().getFullYear();
-const IS_REGISTRATION_CLOSED = true;
+const IS_REGISTRATION_CLOSED = false;
 
 const steps = [
   <Compass key="trilha" />, // 0
